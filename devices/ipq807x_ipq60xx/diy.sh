@@ -7,9 +7,10 @@ SHELL_FOLDER=$(dirname $(readlink -f "$0"))
 rm -rf target/linux/ipq807x
 mv -f ../feeds/ipq807x/ipq807x target/linux/
 rm -rf package/feeds
-./scripts/feeds install -a -p gl_feeds_common -f
+
 ./scripts/feeds install -a -p ipq807x -f
 ./scripts/feeds install -a -p wifi_ax -f
+./scripts/feeds install -a -p gl_feeds_common -f
 ./scripts/feeds install -a -p kiddin9 -f
 ./scripts/feeds install -a
 
